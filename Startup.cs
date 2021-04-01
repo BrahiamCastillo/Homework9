@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Homework9.Data;
+using Microsoft.EntityFrameworkCore;
+using Homework9.Models;
 
 namespace Homework9
 {
@@ -29,6 +31,8 @@ namespace Homework9
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
+            services.AddDbContext<vaccinesContext>(options =>
+            options.UseMySql(Configuration.GetConnectionString("vaccines")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
