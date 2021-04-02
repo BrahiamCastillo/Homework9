@@ -1,0 +1,135 @@
+@page "/registrar"
+@using System;
+@using System.Linq;
+@using Homework9.Models;
+
+<h3>Registrar vacunados</h3>
+<hr />
+
+<div class="container">
+    <form class="form">
+
+        <div class="form-group">
+            <label>Cedula</label>
+            <input class="form-control"   @bind="cedula" placeholder="cedula" />
+        </div>
+
+        <div class="form-group">
+            <label>Nombre</label>
+            <input class="form-control" placeholder="Nombre" @bind="nombre" />
+        </div>
+
+        <div class="form-group">
+            <label>Apellido</label>
+            <input class="form-control" placeholder="Apellido" @bind="apellido" />
+        </div>
+
+        <div class="form-group">
+            <label>Telefono</label>
+            <input class="form-control" placeholder="Telefono" @bind="telefono" />
+        </div>
+
+        <div class="form-group">
+            <label>Correo Electronico</label>
+            <input class="form-control" placeholder="Correo Electronico" @bind="correo" />
+        </div>
+
+        <div class="form-group">
+            <label>Fecha de nacimiento</label>
+            <input type="date" class="form-control" placeholder="Fecha de nacimiento" @bind="fecha" />
+        </div>
+
+        <div class="form-group">
+            <label>Provincia</label>
+            <input class="form-control" placeholder="provincia" @bind="provincia" />
+        </div>
+
+        <div class="form-group">
+            <label>Direccion</label>
+            <input class="form-control" placeholder="Direccion" @bind="direccion" />
+        </div>
+
+
+        <div class="form-group">
+            <label>Tipo de Sangre</label>
+            <select class="form-control" @bind="sangre">
+                <option>Vacio</option>
+                <option id="a+">A+</option>
+                <option id="a-">A-</option>
+                <option id="o+">O+</option>
+                <option id="o-">O-</option>
+                <option id="b-">B-</option>
+                <option id="b+">B+</option>
+                <option id="ab+">AB+</option>
+                <option id="ab-">AB-</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Le Ha dado covid</label>
+            <select class="form-control" @bind="covid">
+                <option>Vacio</option>
+                <option id="si">Si</option>
+                <option id="no">No</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Justificacion</label>
+            <input class="form-control" placeholder="Justificacion por que debe vacunarse en casa" @bind ="justificacion" />
+        </div>
+
+        <button onclick="agregar" class="btn btn-outline-success">Guardar</button>
+    </form>
+</div>
+
+@code
+{
+    string cedula;
+    string nombre;
+    
+    string apellido;
+
+    string telefono;
+
+    string correo;
+
+    DateTime fecha;
+
+    string provincia;
+
+    string direccion;
+
+    string sangre;
+
+    string covid;
+
+    string justificacion; 
+
+    Homework9.Models.vaccinesContext db;
+    Homework9.Models.Persona persona;
+    Homework9.Models.Sangre blood;
+
+    void agregar()
+    {
+        db = new vaccinesContext();
+        persona = new Persona();
+        blood = new Sangre();
+
+        persona.Cedula = cedula;
+        persona.Nombre = nombre;
+        persona.Apellido = apellido;
+        persona.Telefono = telefono;
+        persona.Correo = correo;
+        persona.FechaNacimiento = fecha;
+        persona.Provincia = provincia;
+        persona.Direccion = direccion;
+        //persona.Covid = covid;
+        persona.Justificacion = justificacion;
+        //blood.TipoSangre = sangre;
+        db.Add(persona);
+        //db.Add(blood);
+        db.SaveChanges();
+    }
+
+}
