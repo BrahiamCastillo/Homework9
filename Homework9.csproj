@@ -1,8 +1,9 @@
-﻿
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <UserSecretsId>cbcbeea2-a978-47a7-930d-2b1aad64039d</UserSecretsId>
+    <!-- <UserSecretsId>cbcbeea2-a978-47a7-930d-2b1aad64039d</UserSecretsId> -->
+    <UserSecretsId>ec5d18dc-9671-460e-bdf2-b4663d079b26</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.12" />

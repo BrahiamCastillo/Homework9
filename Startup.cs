@@ -30,7 +30,6 @@ namespace Homework9
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSingleton<WeatherForecastService>();
             services.AddDbContext<vaccinesContext>(options =>
             options.UseMySql(Configuration.GetConnectionString("vaccines")));
         }

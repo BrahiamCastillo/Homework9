@@ -45,72 +45,6 @@
         }
       },
       {
-        "HashCode": -1433033932,
-        "Kind": "Components.Component",
-        "Name": "Homework9.Pages.Counter",
-        "AssemblyName": "Homework9",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Counter"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Homework9.Pages.Counter"
-        }
-      },
-      {
-        "HashCode": -828737771,
-        "Kind": "Components.Component",
-        "Name": "Homework9.Pages.Counter",
-        "AssemblyName": "Homework9",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Homework9.Pages.Counter"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Homework9.Pages.Counter",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -789009253,
-        "Kind": "Components.Component",
-        "Name": "Homework9.Pages.FetchData",
-        "AssemblyName": "Homework9",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "FetchData"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Homework9.Pages.FetchData"
-        }
-      },
-      {
-        "HashCode": 803694804,
-        "Kind": "Components.Component",
-        "Name": "Homework9.Pages.FetchData",
-        "AssemblyName": "Homework9",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Homework9.Pages.FetchData"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Homework9.Pages.FetchData",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": 1600710531,
         "Kind": "Components.Component",
         "Name": "Homework9.Pages.Index",
@@ -140,6 +74,39 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Homework9.Pages.Index",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1627193447,
+        "Kind": "Components.Component",
+        "Name": "Homework9.Pages.Registrar",
+        "AssemblyName": "Homework9",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Registrar"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Homework9.Pages.Registrar"
+        }
+      },
+      {
+        "HashCode": 735079675,
+        "Kind": "Components.Component",
+        "Name": "Homework9.Pages.Registrar",
+        "AssemblyName": "Homework9",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Homework9.Pages.Registrar"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Homework9.Pages.Registrar",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -14726,11 +14693,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/home/brahiam/ProgIII/Homework9/Pages/Counter.razor",
-      "TargetPath": "Pages\\Counter.razor",
-      "FileKind": "component"
-    },
-    {
       "FilePath": "/home/brahiam/ProgIII/Homework9/Pages/Index.razor",
       "TargetPath": "Pages\\Index.razor",
       "FileKind": "component"
@@ -14751,8 +14713,8 @@
       "FileKind": "component"
     },
     {
-      "FilePath": "/home/brahiam/ProgIII/Homework9/Pages/FetchData.razor",
-      "TargetPath": "Pages\\FetchData.razor",
+      "FilePath": "/home/brahiam/ProgIII/Homework9/Pages/Registrar.razor",
+      "TargetPath": "Pages\\Registrar.razor",
       "FileKind": "component"
     }
   ],

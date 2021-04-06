@@ -2,6 +2,9 @@
 @using System;
 @using System.Linq;
 @using Homework9.Models;
+@using Microsoft.EntityFrameworkCore
+@inject DbContextOptions<vaccinesContext> options
+@inject IJSRuntime JSRuntime
 
 <h3>Registrar vacunados</h3>
 <hr />
@@ -79,8 +82,15 @@
             <input class="form-control" placeholder="Justificacion por que debe vacunarse en casa" @bind ="justificacion" />
         </div>
 
-        <button onclick="agregar" class="btn btn-outline-success">Guardar</button>
+        <button @onclick="agregar" class="btn btn-outline-success">Guardar</button>
     </form>
+</div>
+
+<hr>
+<hr>
+
+<div class="input-group-append">
+    <div id="map" style="height:500px;width:100%;"></div>
 </div>
 
 @code
@@ -110,9 +120,18 @@
     Homework9.Models.Persona persona;
     Homework9.Models.Sangre blood;
 
+
+    /// Map
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender) { 
+            await JSRuntime.InvokeVoidAsync("initMap");
+        } 
+    }
     void agregar()
     {
-        db = new vaccinesContext();
+        db = new vaccinesContext(options);
         persona = new Persona();
         blood = new Sangre();
 

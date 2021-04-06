@@ -10,9 +10,6 @@ namespace Homework9.Models
 {
     public partial class vaccinesContext : DbContext
     {
-        public vaccinesContext()
-        {
-        }
 
         public vaccinesContext(DbContextOptions<vaccinesContext> options)
             : base(options)
