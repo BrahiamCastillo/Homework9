@@ -14,7 +14,7 @@
 
         <div class="form-group">
             <label>Cedula</label>
-            <input class="form-control"   @bind="cedula" placeholder="cedula" />
+            <input class="form-control" @bind="cedula" placeholder="Cedula" />
         </div>
 
         <div class="form-group">
@@ -56,22 +56,15 @@
         <div class="form-group">
             <label>Tipo de Sangre</label>
             <select class="form-control" @bind="sangre">
-                <option>Vacio</option>
-                <option id="a+">A+</option>
-                <option id="a-">A-</option>
-                <option id="o+">O+</option>
-                <option id="o-">O-</option>
-                <option id="b-">B-</option>
-                <option id="b+">B+</option>
-                <option id="ab+">AB+</option>
-                <option id="ab-">AB-</option>
+                @foreach(var bld in Blood()) {
+                    <option value=@bld.Id>@bld.TipoSangre</option>
+                }
             </select>
         </div>
 
         <div class="form-group">
-            <label>Le Ha dado covid</label>
+            <label>¿ Le Ha dado covid ?</label>
             <select class="form-control" @bind="covid">
-                <option>Vacio</option>
                 <option id="si">Si</option>
                 <option id="no">No</option>
             </select>
@@ -79,25 +72,37 @@
 
         <div class="form-group">
             <label>Justificacion</label>
-            <input class="form-control" placeholder="Justificacion por que debe vacunarse en casa" @bind ="justificacion" />
+            <input class="form-control" placeholder="Justificacion por que debe vacunarse en casa"
+                @bind="justificacion" />
+        </div>
+
+        <hr>
+        <hr>
+        <h3>Seleccione su ubicación y proceda a introducir la longitud y latitud</h3>
+        <hr>
+        <div class="input-group-append">
+            <div id="map" style="height:500px;width:100%;"></div>
+        </div>
+        <hr>
+        <div class="form-group">
+            <label>Lat</label>
+            <input class="form-control" placeholder="Latitud" @bind="latitud" />
+        </div>
+
+        <div class="form-group">
+            <label>Lgt</label>
+            <input class="form-control" placeholder="Longitud" @bind="longitud" />
         </div>
 
         <button @onclick="agregar" class="btn btn-outline-success">Guardar</button>
     </form>
 </div>
 
-<hr>
-<hr>
-
-<div class="input-group-append">
-    <div id="map" style="height:500px;width:100%;"></div>
-</div>
-
 @code
 {
     string cedula;
     string nombre;
-    
+
     string apellido;
 
     string telefono;
@@ -110,30 +115,40 @@
 
     string direccion;
 
-    string sangre;
+    int sangre;
 
-    string covid;
+    string covid = "Si";
 
-    string justificacion; 
+    string justificacion;
 
-    Homework9.Models.vaccinesContext db;
-    Homework9.Models.Persona persona;
-    Homework9.Models.Sangre blood;
+    double latitud;
+    double longitud;
 
+    List<Sangre> Blood() => new vaccinesContext(options).Sangre.ToList();
 
     /// Map
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (firstRender) { 
+        if (firstRender)
+        {
             await JSRuntime.InvokeVoidAsync("initMap");
-        } 
+        }
+
     }
     void agregar()
     {
-        db = new vaccinesContext(options);
-        persona = new Persona();
-        blood = new Sangre();
+       vaccinesContext db = new vaccinesContext(options);
+        Persona persona = new Persona();
+        sbyte response;
+
+        if(covid == "Si") {
+
+            response = 1;
+        } else {
+
+            response = 0;
+        }
 
         persona.Cedula = cedula;
         persona.Nombre = nombre;
@@ -143,11 +158,12 @@
         persona.FechaNacimiento = fecha;
         persona.Provincia = provincia;
         persona.Direccion = direccion;
-        //persona.Covid = covid;
+        persona.Covid = response;
         persona.Justificacion = justificacion;
-        //blood.TipoSangre = sangre;
-        db.Add(persona);
-        //db.Add(blood);
+        persona.SangreId = sangre;
+        persona.Latitud = latitud;
+        persona.Longitud = longitud;
+        db.Persona.Add(persona);
         db.SaveChanges();
     }
 
