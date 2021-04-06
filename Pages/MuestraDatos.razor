@@ -1,0 +1,51 @@
+@page "/muestradatos"
+@using System;
+@using System.Linq;
+@using Homework9.Models;
+@using Microsoft.EntityFrameworkCore
+@inject DbContextOptions<vaccinesContext> options
+
+<h1>Empleados</h1>
+
+@if(GetPersona().Count > 0){
+<table class="table table-bordered">
+    <thead>
+        <tr>
+        <th>Cedula</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Telefono</th>
+        <th>Correo electronico</th>
+        <th>Fecha de nacimiento</th>
+        <th>Tipo de sangre</th>
+        <th>Direccion</th>
+        <th>Covid</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+        @foreach (Persona pe in GetPersona()){
+            <tr>
+                <td>@pe.Cedula</td>
+                <td>@pe.Nombre</td>
+                <td>@pe.Apellido</td>
+                <td>@pe.Telefono</td>
+                <td>@pe.Correo</td>
+                <td>@pe.FechaNacimiento</td>
+                <td>@pe.Sangre.TipoSangre</td>
+                <td>@pe.Direccion</td>
+                <td>@pe.Covid</td>
+            </tr>
+        }
+    </tbody>
+</table>
+}
+else
+{
+<h2>No hay personas ingresadas.</h2>
+}
+@code {
+    List<Persona> GetPersona() => new vaccinesContext(options).Persona.ToList();
+}
