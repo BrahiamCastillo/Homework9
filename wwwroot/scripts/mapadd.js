@@ -1,6 +1,6 @@
 let map;
 
-function initMap() {
+function initAdd() {
     const myLatlng = { lat: 18.735693, lng: -70.162651 };
     map = new google.maps.Map(document.getElementById("map"), {
         center: myLatlng,

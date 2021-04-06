@@ -45,101 +45,88 @@
         }
       },
       {
-        "HashCode": 1600710531,
+        "HashCode": 1762195938,
         "Kind": "Components.Component",
-        "Name": "Homework9.Pages.Index",
+        "Name": "Homework9.Shared.NavMenu",
         "AssemblyName": "Homework9",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Index"
+            "TagName": "NavMenu"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Homework9.Pages.Index"
+          "Common.TypeName": "Homework9.Shared.NavMenu"
         }
       },
       {
-        "HashCode": 1947917342,
+        "HashCode": -186560003,
         "Kind": "Components.Component",
-        "Name": "Homework9.Pages.Index",
+        "Name": "Homework9.Shared.NavMenu",
         "AssemblyName": "Homework9",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Homework9.Pages.Index"
+            "TagName": "Homework9.Shared.NavMenu"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Homework9.Pages.Index",
+          "Common.TypeName": "Homework9.Shared.NavMenu",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
       {
-        "HashCode": -1627193447,
+        "HashCode": 1445251591,
         "Kind": "Components.Component",
-        "Name": "Homework9.Pages.Registrar",
+        "Name": "Homework9.Shared.SurveyPrompt",
         "AssemblyName": "Homework9",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Registrar"
+            "TagName": "SurveyPrompt"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Homework9.Pages.Registrar"
+          "Common.TypeName": "Homework9.Shared.SurveyPrompt"
         }
       },
       {
-        "HashCode": 735079675,
+        "HashCode": -956579087,
         "Kind": "Components.Component",
-        "Name": "Homework9.Pages.Registrar",
+        "Name": "Homework9.Shared.SurveyPrompt",
         "AssemblyName": "Homework9",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Homework9.Pages.Registrar"
+            "TagName": "Homework9.Shared.SurveyPrompt"
           }
         ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Homework9.Pages.Registrar",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1654875008,
-        "Kind": "Components.Component",
-        "Name": "Homework9.Pages.MuestraDatos",
-        "AssemblyName": "Homework9",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
+        "BoundAttributes": [
           {
-            "TagName": "MuestraDatos"
+            "Kind": "Components.Component",
+            "Name": "Title",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Title"
+            }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Homework9.Pages.MuestraDatos"
-        }
-      },
-      {
-        "HashCode": 2066139465,
-        "Kind": "Components.Component",
-        "Name": "Homework9.Pages.MuestraDatos",
-        "AssemblyName": "Homework9",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Homework9.Pages.MuestraDatos"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Homework9.Pages.MuestraDatos",
+          "Common.TypeName": "Homework9.Shared.SurveyPrompt",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -240,88 +227,134 @@
         }
       },
       {
-        "HashCode": 1445251591,
+        "HashCode": 1654875008,
         "Kind": "Components.Component",
-        "Name": "Homework9.Shared.SurveyPrompt",
+        "Name": "Homework9.Pages.MuestraDatos",
         "AssemblyName": "Homework9",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "SurveyPrompt"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Title",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Title"
-            }
+            "TagName": "MuestraDatos"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Homework9.Shared.SurveyPrompt"
+          "Common.TypeName": "Homework9.Pages.MuestraDatos"
         }
       },
       {
-        "HashCode": -956579087,
+        "HashCode": 2066139465,
         "Kind": "Components.Component",
-        "Name": "Homework9.Shared.SurveyPrompt",
+        "Name": "Homework9.Pages.MuestraDatos",
         "AssemblyName": "Homework9",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Homework9.Shared.SurveyPrompt"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Title",
-            "TypeName": "System.String",
-            "Metadata": {
-              "Common.PropertyName": "Title"
-            }
+            "TagName": "Homework9.Pages.MuestraDatos"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Homework9.Shared.SurveyPrompt",
+          "Common.TypeName": "Homework9.Pages.MuestraDatos",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
       {
-        "HashCode": 1762195938,
+        "HashCode": -1627193447,
         "Kind": "Components.Component",
-        "Name": "Homework9.Shared.NavMenu",
+        "Name": "Homework9.Pages.Registrar",
         "AssemblyName": "Homework9",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "NavMenu"
+            "TagName": "Registrar"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Homework9.Shared.NavMenu"
+          "Common.TypeName": "Homework9.Pages.Registrar"
         }
       },
       {
-        "HashCode": -186560003,
+        "HashCode": 735079675,
         "Kind": "Components.Component",
-        "Name": "Homework9.Shared.NavMenu",
+        "Name": "Homework9.Pages.Registrar",
         "AssemblyName": "Homework9",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Homework9.Shared.NavMenu"
+            "TagName": "Homework9.Pages.Registrar"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Homework9.Shared.NavMenu",
+          "Common.TypeName": "Homework9.Pages.Registrar",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -179791638,
+        "Kind": "Components.Component",
+        "Name": "Homework9.Pages.About",
+        "AssemblyName": "Homework9",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "About"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Homework9.Pages.About"
+        }
+      },
+      {
+        "HashCode": 673515102,
+        "Kind": "Components.Component",
+        "Name": "Homework9.Pages.About",
+        "AssemblyName": "Homework9",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Homework9.Pages.About"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Homework9.Pages.About",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1600710531,
+        "Kind": "Components.Component",
+        "Name": "Homework9.Pages.Index",
+        "AssemblyName": "Homework9",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Homework9.Pages.Index"
+        }
+      },
+      {
+        "HashCode": 1947917342,
+        "Kind": "Components.Component",
+        "Name": "Homework9.Pages.Index",
+        "AssemblyName": "Homework9",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Homework9.Pages.Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Homework9.Pages.Index",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -14708,6 +14741,11 @@
     {
       "FilePath": "/home/brahiam/ProgIII/Homework9/App.razor",
       "TargetPath": "App.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "/home/brahiam/ProgIII/Homework9/Pages/About.razor",
+      "TargetPath": "Pages\\About.razor",
       "FileKind": "component"
     },
     {

@@ -4,6 +4,7 @@
 @using Homework9.Models;
 @using Microsoft.EntityFrameworkCore
 @inject DbContextOptions<vaccinesContext> options
+@inject IJSRuntime JSRuntime
 
 <h1>Empleados</h1>
 
@@ -46,6 +47,20 @@ else
 {
 <h2>No hay personas ingresadas.</h2>
 }
+<hr>
+
+<div class="input-group-append">
+    <div id="map" style="height:500px;width:100%;"></div>
+</div>
 @code {
     List<Persona> GetPersona() => new vaccinesContext(options).Persona.ToList();
+
+    //Mapa
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender) { 
+            await JSRuntime.InvokeVoidAsync("initMap", GetPersona());
+        } 
+    }
 }
